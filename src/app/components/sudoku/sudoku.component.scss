@@ -1,0 +1,71 @@
+.container-fluid {
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/041/929/489/4k/michiel-van-den-heuvel-doodlin-v5.jpg?1633091040');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 86.7vh;
+}
+
+hr {
+    border: 1px white double;
+    height: 1px;
+    background-image: linear-gradient(to right, #fff, #929090, #fff);
+}
+
+//////////
+
+.sudoku-board {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+
+
+}
+
+.sudoku-board .col {
+    border: 1px solid #e5e5e5;
+    padding: 0;
+    line-height: 3rem;
+    display: inline-grid;
+    background-color: aliceblue;
+}
+
+.btn-group {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.sudoku-board .col span {
+    width: 44px;
+    height: 44px;
+    display: block;
+    margin: 2px;
+    border-radius: 4px;
+    transition: background-color 0.25s;
+    cursor: pointer;
+}
+
+.sudoku-board .col span.wrong {
+    background: red;
+    color: white;
+}
+
+.sudoku-row .sudoku-col:last-child {
+    border-right: 0 none;
+}
+
+.sudoku-row:last-child .sudoku-col {
+    border-bottom: 0 none;
+}
+
+.sudoku-row:nth-child(3) .sudoku-col,
+.sudoku-row:nth-child(6) .sudoku-col {
+    border-bottom-color: #000000;
+
+}
+
+.sudoku-row .sudoku-col:nth-child(3),
+.sudoku-row .sudoku-col:nth-child(6) {
+    border-right-color: #000000;
+}
+

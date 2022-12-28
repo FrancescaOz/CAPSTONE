@@ -1,0 +1,94 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 mx-auto bg-light my-5 p-4 rounded-4 text-center">
+            <h3>Registrati</h3>
+            <!--input-->
+            <div class="formGroup mb-3">
+                <input type="email" class="formControl" placeholder="Inserisci la tua e-mail" #userEmail required />
+            </div>
+            <div class="formGroup">
+                <input type="password" class="formControl" placeholder="Inserisci la tua password" #userPwd required />
+            </div>
+            <!--funzione signUp-->
+            <div class="formGroup">
+                <button type="button" class="btn btn-success rounded-3 my-3" value="Registrati"
+                    (click)="authService.SignUp(userEmail.value, userPwd.value)">Registrati
+                </button>
+            </div>
+
+            <div class="formGroup">
+                <span class="or"><span class="orInner">Oppure:</span></span>
+            </div>
+            <!--google-->
+            <div class="formGroup">
+                <button type="button" class="btn btn-google my-3" (click)="authService.GoogleAuth()">
+                    <i class="fab fa-google-plus-g"></i>
+                    Registrati con Google
+                </button>
+            </div>
+            <!--login-->
+            <div class="redirectToLogin">
+                <span>Hai già un account?
+                    <span class="redirect text-success" routerLink="/sign-in">Login</span></span>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<!--<div class="displayTable">
+    <div class="displayTableCell">
+      <div class="authBlock">
+        <h3>Sign Up</h3>
+        <div class="formGroup">
+          <input
+            type="email"
+            class="formControl"
+            placeholder="Email Address"
+            #userEmail
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <input
+            type="password"
+            class="formControl"
+            placeholder="Password"
+            #userPwd
+            required
+          />
+        </div>
+        <div class="formGroup">
+          <input
+            type="button"
+            class="btn btnPrimary"
+            value="Sign Up"
+            (click)="authService.SignUp(userEmail.value, userPwd.value)"
+          />
+        </div>
+        <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div>
+
+        <div class="formGroup">
+          <button
+            type="button"
+            class="btn googleBtn"
+            (click)="authService.GoogleAuth()"
+          >
+            <i class="fab fa-google-plus-g"></i>
+            Continue with Google
+          </button>
+        </div>
+      </div>
+      <div class="redirectToLogin">
+        <span
+          >Already have an account?
+          <span class="redirect" routerLink="/sign-in">Login</span></span
+        >
+      </div>
+    </div>
+  </div>-->

@@ -1,0 +1,19 @@
+body, html {
+    height: 100%;
+  }
+
+.container-fluid {
+
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/056/343/539/4k/claud-z-final.jpg?1669034477');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 86.7vh;
+}
+
+h1 {
+    font-size: 5em;
+    color: beige;
+    -webkit-text-stroke: 1px rgb(83, 83, 83); /* bordo testo */
+}
+

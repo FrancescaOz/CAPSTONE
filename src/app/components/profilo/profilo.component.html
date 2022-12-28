@@ -1,0 +1,24 @@
+<!-- Barra di navigazione laterale -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="inner-adjust mt-3">
+          <!-- Dati dell'utente -->
+          <div class="row" *ngIf="authService.userData as user">
+            <div class="col-md-5 col-lg-4 bg-light p-5 rounded-4">
+              <div class="media">
+                <img class="align-self-start mr-5 img-thumbnail rounded-circle" src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
+                  alt="{{user.displayName}}">
+                <div class="media-body">
+                  <h1 class="mt-2">Ciao, <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
+                  <p class="mt-5">User ID: <strong>{{user.uid}}</strong></p>
+                  <p>Email: <strong>{{user.email}}</strong></p>
+                  <p>Email verificata: <strong>{{user.emailVerified}}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
