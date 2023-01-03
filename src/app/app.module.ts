@@ -31,8 +31,6 @@ import { environment } from './environments/environments';
 
 import { AuthService } from './shared/services/auth.service';
 
-
-
 @NgModule({
     declarations: [
         AppComponent,

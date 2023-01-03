@@ -41,7 +41,7 @@ export class AuthService {
             });
         })
             .catch((error) => {
-                window.alert('si è verificato un errore');
+                window.alert('Utente già registrato');
             });
     }
 
@@ -53,7 +53,7 @@ export class AuthService {
             this.SetUserData(result.user);
         })
             .catch((error) => {
-                window.alert('si è verificato un errore')
+                window.alert('Si prega di compilare correttamente i campi')
             })
     }
 
@@ -61,7 +61,7 @@ export class AuthService {
 
     invioMailVerifica() {
         return this.afAuth.currentUser.then((u: any) => u.invioMailVerifica()).then(() => {
-            this.router.navigate(['verifica indirizzo e-mail']);
+            this.router.navigate(['verificaMail']);
         });
     }
 
@@ -102,7 +102,7 @@ export class AuthService {
             });
     }
 
-    //Ipostazione dati utente
+    //Impostazione dati utente
 
     SetUserData(user: any) {
         const userRef: AngularFirestoreDocument<any> = this.afs.doc(
