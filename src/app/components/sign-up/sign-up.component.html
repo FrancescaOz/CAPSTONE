@@ -3,8 +3,9 @@
         <div class="col-4 mx-auto bg-light my-5 p-4 rounded-4 text-center">
             <h3>Registrati</h3>
             <!--input-->
-            <form class="form-group mb-3">
-                <input type="email" class="form-control mb-3" placeholder="Inserisci la tua e-mail" #userEmail required />
+            <form class="form-group was-validated" #registrati="ngForm">
+                <input type="email" class="form-control mb-3" placeholder="Inserisci la tua e-mail" #userEmail
+                    required />
                 <input type="password" class="form-control" placeholder="Inserisci la tua password" #userPwd required />
 
                 <!--funzione signUp-->
@@ -18,7 +19,7 @@
             </div>
             <!--google-->
             <div class="form-group">
-                <button type="button" class="btn btn-outline-success my-2" (click)="authService.GoogleAuth()">
+                <button type="button" class="btn btn-outline-success my-3" (click)="authService.GoogleAuth()">
                     <i class="fab fa-google-plus-g"></i>
                     Registrati con Google
                 </button>
@@ -26,7 +27,8 @@
             <!--login-->
             <div class="redirectToLogin">
                 <p>Hai già un account?
-                    <span class="redirect text-success" routerLink="/sign-in">Login</span></p>
+                    <span class="redirect text-success" routerLink="/sign-in">Login</span>
+                </p>
             </div>
         </div>
     </div>
