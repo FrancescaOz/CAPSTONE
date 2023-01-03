@@ -3,5 +3,11 @@ export interface User {
     email: string;
     displayName: string;
     photoURL: string;
-    emailVerified: boolean;
+    //emailVerified: boolean;
+}
+
+export interface UserLoggato {
+    displayName: string;
+    role: string;
+    session: string;
 }

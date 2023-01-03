@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SudokuBoard } from 'src/app/models/sudokuTabellone';
 import { Cell } from 'src/app/models/cell';
+import { UserLoggato } from 'src/app/shared/services/user';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 
 @Component({
@@ -14,10 +16,25 @@ export class SudokuComponent implements OnInit {
 
     isDone = false;
 
-    constructor() { }
+    constructor(private afAuth: AngularFireAuth) { }
 
     ngOnInit() {
         this.board = new SudokuBoard();
+        this.afAuth.authState.subscribe((user) => {
+            if (user && user.displayName) {
+                //sessione dell'utente loggato
+                    let utenteLoggato = {} as UserLoggato;
+                        utenteLoggato.displayName = user.displayName;
+                        utenteLoggato.role = 'utente';
+                        utenteLoggato.session = '/sudoku';
+                        localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
+
+                JSON.parse(localStorage.getItem('user')!);
+            } else {
+                localStorage.setItem('user', 'null');
+                JSON.parse(localStorage.getItem('user')!);
+            }
+        });
         while (this.board.isUndefined()) {
             this.board.initialize();
         }

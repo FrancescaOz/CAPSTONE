@@ -3,37 +3,30 @@
         <div class="col-4 mx-auto bg-light mt-5 p-4 rounded-4 text-center">
             <h3>Accedi</h3>
             <!--INPUT-->
-            <div class="formGroup">
-                <input type="text" class="formControl mb-3" placeholder="Username" #userName required>
-            </div>
-            <div class="formGroup">
-                <input type="password" class="formControl" placeholder="Password" #userPassword required>
-            </div>
-            <!--funzione Sign In-->
-            <div class="formGroup">
+            <form class="form-group was-validated" #accedi="ngForm">
+                <input type="text" class="form-control is-invalid mb-3" placeholder="Username" #userName required>
+                <input type="password" class="form-control is-invalid" placeholder="Password" #userPassword required>
+                <!--funzione Sign In-->
                 <button type="button" class="btn btn-success rounded-3 my-3" value="Log in"
                     (click)="authService.SignIn(userName.value, userPassword.value)">Accedi</button>
-            </div>
-            <div class="formGroup">
-                <span class="or"><span class="orInner">Oppure:</span></span>
+            </form>
+            <div>
+                <p>Oppure:</p>
             </div>
             <!--GOOGLE-->
-            <div class="formGroup">
-                <button type="button" class="btn btn-google my-3" (click)="authService.GoogleAuth()">
+            <div>
+                <button type="button" class="btn btn-outline-success my-1" (click)="authService.GoogleAuth()">
                     <i class="fab fa-google-plus-g"></i>
                     accedi con Google
                 </button>
             </div>
             <!--password dimenticata-->
             <div class="forgotPassword text-success my-3">
-                <div>
-                    <span routerLink="/passwordDimenticata">Hai dimenticato la password?</span>
-                </div>
+                <p routerLink="/passwordDimenticata">Hai dimenticato la password?</p>
             </div>
             <!---passa a Registrati-->
             <div class="redirectToLogin">
-                <span>non hai un account?<span class="redirect text-success"
-                        routerLink="/sign-up">Registrati</span></span>
+                <p>non hai un account?<span class="redirect text-success" routerLink="/sign-up">Registrati</span></p>
             </div>
         </div>
 

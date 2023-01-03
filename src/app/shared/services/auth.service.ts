@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { User } from './user';
+import { User, UserLoggato } from './user';
 import *as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
@@ -19,9 +19,16 @@ export class AuthService {
     ) {
         //impostazione del localstorage. Quando si è loggati  e quando si è disconnessi
         this.afAuth.authState.subscribe((user) => {
-            if (user) {
+            if (user && user.displayName) {
                 this.userData = user;
+                //sessione dell'utente loggato
                 localStorage.setItem('user', JSON.stringify(this.userData));
+                    let utenteLoggato = {} as UserLoggato;
+                        utenteLoggato.displayName = user.displayName;
+                        utenteLoggato.role = 'utente';
+                        utenteLoggato.session = '';
+                        localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
+
                 JSON.parse(localStorage.getItem('user')!);
             } else {
                 localStorage.setItem('user', 'null');
@@ -30,7 +37,7 @@ export class AuthService {
         });
     }
 
-    //Registrazione email/password
+    //accedi email/password
     SignIn(email: string, password: string) {
         return this.afAuth.signInWithEmailAndPassword(email, password).then((result) => {
             this.SetUserData(result.user);
@@ -41,28 +48,19 @@ export class AuthService {
             });
         })
             .catch((error) => {
-                window.alert('Utente già registrato');
+                window.alert('Si prega di compilare correttamente i campi');
             });
     }
 
-    //login con email/password
+    //registrati con email/password
     SignUp(email: string, password: string) {
         return this.afAuth.createUserWithEmailAndPassword(email, password).then((result) => {
-            //chiama la funzione di verifica della mail quando un nuovo utente si logga e restituisce la promise
-            this.invioMailVerifica();
             this.SetUserData(result.user);
+            this.router.navigate(['profilo']);
         })
             .catch((error) => {
                 window.alert('Si prega di compilare correttamente i campi')
             })
-    }
-
-    //invia e-mail di verifica quando un nuovo utente si registra
-
-    invioMailVerifica() {
-        return this.afAuth.currentUser.then((u: any) => u.invioMailVerifica()).then(() => {
-            this.router.navigate(['verificaMail']);
-        });
     }
 
     //reset password
@@ -79,7 +77,7 @@ export class AuthService {
     //cambia in vero quando l'utente è loggato e la mail verificata
     get Loggato(): boolean {
         const user = JSON.parse(localStorage.getItem('user')!);
-        return user !== null && user.emailVerified !== false ? true : false;
+        return user !== null;
     }
 
     //login con account esterni
@@ -114,7 +112,7 @@ export class AuthService {
             email: user.email,
             displayName: user.displayName,
             photoURL: user.photoURL,
-            emailVerified: user.emailVerified,
+            //emailVerified: user.emailVerified,
         };
 
         return userRef.set(userData, {
