@@ -15,8 +15,14 @@ body, html {
     background-color: #f9efca;
 }
 
-.btn {
-background-color: #f9efca;
+.btn-secondary {
+    background-color: #D8BA87;
+    border: 1px solid #D8BA87;
+    color: #251B21;
+}
+
+.btn-secondary:hover {
+    background-color: #f9efca;
 }
 
 .position-relative {
