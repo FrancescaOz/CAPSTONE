@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
@@ -8,7 +9,13 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 })
 export class SignInComponent implements OnInit {
 constructor (public authService: AuthService) {}
-    ngOnInit(){
+    ngOnInit(): void {}
 
-    }
+@ViewChild('form', {static:true}) form!:NgForm;
+
+userForm:any = {
+    nome: '',
+    password:''
+  }
+
 }

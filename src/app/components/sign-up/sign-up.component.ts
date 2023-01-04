@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
@@ -12,4 +13,10 @@ constructor (public authService: AuthService) {}
 
     }
 
+    @ViewChild('form', {static:true}) form!:NgForm;
+
+    userForm:any = {
+        email: '',
+        password:''
+      }
 }
