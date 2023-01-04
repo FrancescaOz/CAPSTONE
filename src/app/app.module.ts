@@ -30,6 +30,8 @@ import { environment } from './environments/environments';
 //auth service
 
 import { AuthService } from './shared/services/auth.service';
+import { Comp4Component } from './components/comp4/comp4.component';
+import { QuizComponent } from './components/quiz/quiz.component';
 
 @NgModule({
     declarations: [
@@ -46,7 +48,9 @@ import { AuthService } from './shared/services/auth.service';
         VerificaMailComponent,
         SignInComponent,
         SignUpComponent,
-        ProfiloComponent
+        ProfiloComponent,
+        Comp4Component,
+        QuizComponent
     ],
     imports: [
         BrowserModule,

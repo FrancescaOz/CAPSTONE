@@ -7,7 +7,9 @@ import { ComeGiocareComponent } from './components/come-giocare/come-giocare.com
 import { Comp1Component } from './components/comp1/comp1.component';
 import { Comp2Component } from './components/comp2/comp2.component';
 import { Comp3Component } from './components/comp3/comp3.component';
+import { Comp4Component } from './components/comp4/comp4.component';
 import { SudokuComponent } from './components/sudoku/sudoku.component';
+import { QuizComponent } from './components/quiz/quiz.component';
 
 import { PasswordDimenticataComponent } from './components/password-dimenticata/password-dimenticata.component';
 import { VerificaMailComponent } from './components/verifica-mail/verifica-mail.component';
@@ -69,6 +71,14 @@ const routes: Routes = [
     {
         path: "sudoku",
         component: SudokuComponent
+    },
+    {
+        path: "cercaaltrove",
+        component: Comp4Component
+    },
+    {
+        path: "quiz",
+        component: QuizComponent
     },
     {
         path: "**",
