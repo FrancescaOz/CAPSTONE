@@ -1,0 +1,20 @@
+.container-fluid {
+    position: relative;
+    width: 100vw;
+    height: 86.7vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid video {
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    height: 86.7vh;
+    z-index: 0;
+}
+
+.container-fluid div {
+    position: relative;
+    z-index: 1;
+}

@@ -19,6 +19,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 
 import { AuthGuard } from './shared/guard/auth.guard';
+import { FinaleBuonoComponent } from './components/finale-buono/finale-buono.component';
 
 const routes: Routes = [
     {
@@ -74,8 +75,8 @@ const routes: Routes = [
         component: Comp5Component,
     },
     {
-        path: "cambiamenti",
-        component: Comp5Component,
+        path: "complimenti",
+        component: FinaleBuonoComponent,
     },
     {
         path: "comegiocare",

@@ -22,6 +22,11 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { PasswordDimenticataComponent } from './components/password-dimenticata/password-dimenticata.component';
 import { VerificaMailComponent } from './components/verifica-mail/verifica-mail.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
+import { Comp5Component } from './components/comp5/comp5.component';
+import { FinaleBuonoComponent } from './components/finale-buono/finale-buono.component';
+import { Comp4Component } from './components/comp4/comp4.component';
+
+
 // Firebase services + environment module
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -33,10 +38,8 @@ import { environment } from './environments/environments';
 //auth service
 
 import { AuthService } from './shared/services/auth.service';
-import { Comp4Component } from './components/comp4/comp4.component';
-
 import {HttpClientModule} from '@angular/common/http';
-import { Comp5Component } from './components/comp5/comp5.component';
+
 
 
 @NgModule({
@@ -58,6 +61,7 @@ import { Comp5Component } from './components/comp5/comp5.component';
         Comp4Component,
         QuizComponent,
         Comp5Component,
+        FinaleBuonoComponent
     ],
     imports: [
         BrowserModule,

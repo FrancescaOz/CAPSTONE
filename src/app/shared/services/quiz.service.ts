@@ -1,7 +1,6 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators'
+import { Observable, observable } from 'rxjs';
 
 
 @Injectable({
@@ -10,18 +9,12 @@ import { map } from 'rxjs/operators'
 
 export class QuizService {
 
-    url = 'https://the-trivia-api.com/api/questions?limit=10&region=IT&difficulty=medium';
+    // url =  https://opentdb.com/api_config.php;
     constructor(private http: HttpClient) { }
 
-    getQuestion() {
-        return this.http.get(this.url).subscribe(data => {
-            console.log(data);
-        })
-
-    };
-
-
-
+   getQuestion(): Observable<any>{
+    return this.http.get<any>('https://opentdb.com/api.php?amount=10');
+   }
 }
 
 

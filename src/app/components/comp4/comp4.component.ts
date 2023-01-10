@@ -17,7 +17,7 @@ export class Comp4Component implements OnInit {
                     let utenteLoggato = {} as UserLoggato;
                         utenteLoggato.displayName = user.displayName;
                         utenteLoggato.role = 'utente';
-                        utenteLoggato.session = '/bussi';
+                        utenteLoggato.session = '/cercaaltrove';
                         localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
 
                 JSON.parse(localStorage.getItem('user')!);

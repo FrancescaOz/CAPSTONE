@@ -1,4 +1,3 @@
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6" id="donna">
@@ -6,47 +5,37 @@
                 perspiciatis facilis consectetur accusantium deleniti velit adipisci ipsum magnam ducimus rerum cumque
                 blanditiis tempore minus culpa delectus, nesciunt ullam deserunt reprehenderit!</p>
         </div>
-        <div class="col-6 text-center">
-            <h2>TITOLO PROVVISORIO</h2>
+        <div class="col-6 text-center mt-5">
             <div class="row">
                 <div class="col-md-12">
                     <div class="row mt-5">
-                        <h3 class="mb-5"></h3>
+                        <div *ngIf="totalCount<10 && quiz">
+                            <h2 [innerHTML]="quiz.question" class="mb-4"></h2>
+                          <p [innerHTML]="quiz.category" class="fs-4 fst-italic"></p>
+                          </div>
                         <div class="row mb-5">
                             <div class="col-md-6">
-                                <p>domanda 1/10</p>
+                                <p>{{correctCount}}/{{totalCount}}</p>
                             </div>
-                            <div class="col-md-6">
-                                <p>tempo 10:50</p>
+                            <div *ngIf="totalCount<10">
+                                <div class="progress">
+                                    <div [ngClass]="timeLeft>30?'bg-custom':'bg-danger'" class="progress-bar-striped"
+                                        role="progressbar" [style.width.%]="timeLeft" [attr.aria-valuenow]="timeLeft"
+                                        [attr.aria-valuemin]="0" [attr.aria-valuemax]="100"></div>
+                                </div>
+                            </div>
+                            <div *ngIf="totalCount==5">
+                                <h3 *ngIf="correctCount>2">Good Job!</h3>
+                                <h3 *ngIf="correctCount<3">Sorry, better luck next time!</h3>
+                              </div>
+                        </div>
+                        <div class="row">
+                            <div *ngFor="let answer of quiz.answers" class="col-md-6 mb-4">
+                                <button class="bg-color p-3 rounded-pill option w-100"
+                                    (click)="answerQuestion(answer.correctAnswer)" [innerHtml]=answer.answer></button>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <p class="bg-color p-3 rounded-pill option"> scelta 1</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="bg-color p-3 rounded-pill option"> scelta 2</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="bg-color p-3 rounded-pill option"> scelta 3</p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="bg-color p-3 rounded-pill option"> scelta 4</p>
-                        </div>
-                        <div class="col-md-12">
-                            <button type="button" class="btn bg-color rounded-pill mt-4 px-3">Prossima domanda</button>
-                        </div>
-                        <div class="col-md-12 answerIndicator mt-5">
-                            <div class="me-2"></div>
-                            <div class="me-2"></div>
-                            <div class="me-2"></div>
-                            <div class="me-2"></div>
-                            <div class="me-2"></div>
-                            <div class="me-2"></div>
-                            <div class="me-2"></div>
-                            <div class="me-2"></div>
-                            <div class="me-2"></div>
-                            <div></div>
-                        </div>
+
                     </div>
                 </div>
 
