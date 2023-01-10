@@ -1,0 +1,33 @@
+#donna {
+    background-image: url('../../../assets/img/kureneko-e1610987984195-remini-enhanced.png');
+    background-size: cover;
+    height: 86.7vh;
+}
+
+.bg-color {
+    background-color: #FCCDBD;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.bg-color:hover {
+    box-shadow: 0 0.4rem 1rem 0 #CACAC9;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.answerIndicator div{
+ height: 25px;
+ width: 25px;
+ background-color: #CACAC9;
+ display: inline-block;
+ border-radius: 50%;
+}

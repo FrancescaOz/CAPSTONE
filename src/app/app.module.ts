@@ -13,6 +13,9 @@ import { Comp1Component } from './components/comp1/comp1.component';
 import { Comp2Component } from './components/comp2/comp2.component';
 import { Comp3Component } from './components/comp3/comp3.component';
 import { SudokuComponent } from './components/sudoku/sudoku.component';
+import { QuizComponent } from './components/quiz/quiz.component';
+
+
 //autenticazione//
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -31,7 +34,10 @@ import { environment } from './environments/environments';
 
 import { AuthService } from './shared/services/auth.service';
 import { Comp4Component } from './components/comp4/comp4.component';
-import { QuizComponent } from './components/quiz/quiz.component';
+
+import {HttpClientModule} from '@angular/common/http';
+import { Comp5Component } from './components/comp5/comp5.component';
+
 
 @NgModule({
     declarations: [
@@ -50,12 +56,14 @@ import { QuizComponent } from './components/quiz/quiz.component';
         SignUpComponent,
         ProfiloComponent,
         Comp4Component,
-        QuizComponent
+        QuizComponent,
+        Comp5Component,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
+        HttpClientModule,
         //firebase
         AngularFireModule.initializeApp(environment.firebase),
         AngularFireAuthModule,

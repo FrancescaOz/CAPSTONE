@@ -1,18 +1,19 @@
 .container-fluid {
-    background-image: url('https://cdnb.artstation.com/p/assets/images/images/041/929/489/4k/michiel-van-den-heuvel-doodlin-v5.jpg?1633091040');
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/033/006/424/4k/connor-sheehan-jinji-grotto-enviro-001.jpg?1608124138');
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 86.7vh;
 }
 
-hr {
-    border: 1px white double;
-    height: 1px;
-    background-image: linear-gradient(to right, #fff, #929090, #fff);
+.btn {
+    background-color: #E6E2C1;
+    color: #000000;
 }
 
-//////////
+.btn:hover {
+    background-color:#5A765C ;
+}
 
 .sudoku-board {
     width: 450px;

@@ -9,6 +9,7 @@ import { Comp2Component } from './components/comp2/comp2.component';
 import { Comp3Component } from './components/comp3/comp3.component';
 import { Comp4Component } from './components/comp4/comp4.component';
 import { SudokuComponent } from './components/sudoku/sudoku.component';
+import { Comp5Component } from './components/comp5/comp5.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 
 import { PasswordDimenticataComponent } from './components/password-dimenticata/password-dimenticata.component';
@@ -65,16 +66,24 @@ const routes: Routes = [
         component: Comp3Component,
     },
     {
+        path: "cercaaltrove",
+        component: Comp4Component,
+    },
+    {
+        path: "cambiamenti",
+        component: Comp5Component,
+    },
+    {
+        path: "cambiamenti",
+        component: Comp5Component,
+    },
+    {
         path: "comegiocare",
         component: ComeGiocareComponent
     },
     {
         path: "sudoku",
         component: SudokuComponent
-    },
-    {
-        path: "cercaaltrove",
-        component: Comp4Component
     },
     {
         path: "quiz",
