@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row justify-content-between">
+        <div class="col-md-4 bg-light mt-3 rounded-4 p-3 ms-4">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas consequatur nulla enim doloribus! Aliquam
+                vitae accusantium necessitatibus? Nesciunt, aliquam ducimus dolorem sapiente voluptatem eligendi rerum
+                minima repudiandae ea harum incidunt, cupiditate eveniet possimus quod ut laudantium. Fuga reiciendis
+                commodi blanditiis beatae tenetur ipsam voluptates, repudiandae velit at quam, ratione ipsa veritatis
+                quos ducimus sint, iure quod! Dolores, hic nam minima natus minus deserunt, sunt error rem porro ut
+                accusantium ad odio. Exercitationem qui, sint eos dolores itaque non reiciendis doloribus odio est. Quia
+                ipsam explicabo quam recusandae. Culpa esse nisi cum, quam ut distinctio debitis ratione non nostrum
+                necessitatibus expedita.</p>
+
+            <div class="row m-4 p-2">
+                <button class="btn btn-secondary mb-3" [routerLink]="'/cercaaltrove'">Rinuncia agli acquisti</button>
+            </div>
+        </div>
+        <div class="col-md-4 bg-light mt-3 rounded-4 p-3 me-4">
+            <div class="navbar navbar-light mb-2" style="background-color: #A79FB5;">
+                <a class="navbar-brand ms-3 text-white"><img src="https://www.pngrepo.com/png/272747/512/potion.png"
+                        width="30" height="30" alt="potion logo" id="logo" [routerLink]="'/straniincontri'"> Imelda's: pozioni a buon mercato</a>
+                <span class="me-3 text-white"><a>(0) <i class="fa-solid fa-cart-shopping"
+                            style="color: #fff;"></i></a></span>
+            </div>
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="card col-md-3" *ngFor="let potion of potions">
+                        <img class="card-img-top mt-2" src="{{potion.image}}" alt="{{potion.name}}">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-3">{{potion.name}}</h5>
+                            <p>{{potion.description}}</p>
+                            <div class="row justify-content-center">
+                                <div class="col-4">
+                                    <a><i class="fa-regular fa-heart"></i></a>
+                                </div>
+                                <div class="col-4">
+                                    <a><i class="fa-solid fa-cart-shopping"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-light text-center text-lg-start">
+                <!-- Copyright -->
+                <div class="text-center p-1" style="background-color: #A79FB5;">
+                    <p class="text-white my-0">&copy; una società errante del gruppo Witch S.p.a</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

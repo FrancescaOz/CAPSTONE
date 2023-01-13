@@ -11,6 +11,7 @@ import { Comp4Component } from './components/comp4/comp4.component';
 import { SudokuComponent } from './components/sudoku/sudoku.component';
 import { Comp5Component } from './components/comp5/comp5.component';
 import { QuizComponent } from './components/quiz/quiz.component';
+import { Comp6Component } from './components/comp6/comp6.component';
 
 import { PasswordDimenticataComponent } from './components/password-dimenticata/password-dimenticata.component';
 import { VerificaMailComponent } from './components/verifica-mail/verifica-mail.component';
@@ -73,6 +74,10 @@ const routes: Routes = [
     {
         path: "cambiamenti",
         component: Comp5Component,
+    },
+    {
+        path: "straniincontri",
+        component: Comp6Component,
     },
     {
         path: "complimenti",

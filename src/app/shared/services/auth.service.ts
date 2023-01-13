@@ -55,13 +55,22 @@ export class AuthService {
     //registrati con email/password
     SignUp(email: string, password: string) {
         return this.afAuth.createUserWithEmailAndPassword(email, password).then((result) => {
+            //this.SendVerificationMail();
             this.SetUserData(result.user);
-            this.router.navigate(['profilo']);
+            this.router.navigate(['sign-in']);
         })
             .catch((error) => {
                 window.alert('Si prega di compilare correttamente i campi')
             })
     }
+
+    SendVerificationMail() {
+        return this.afAuth.currentUser
+          .then((u: any) => u.sendEmailVerification())
+          .then(() => {
+            this.router.navigate(['verificaMail']);
+          });
+      }
 
     //reset password
 
@@ -112,7 +121,7 @@ export class AuthService {
             email: user.email,
             displayName: user.displayName,
             photoURL: user.photoURL,
-            //emailVerified: user.emailVerified,
+            emailVerified: user.emailVerified,
         };
 
         return userRef.set(userData, {

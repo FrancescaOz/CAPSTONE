@@ -39,6 +39,7 @@ import { environment } from './environments/environments';
 
 import { AuthService } from './shared/services/auth.service';
 import {HttpClientModule} from '@angular/common/http';
+import { Comp6Component } from './components/comp6/comp6.component';
 
 
 
@@ -61,7 +62,8 @@ import {HttpClientModule} from '@angular/common/http';
         Comp4Component,
         QuizComponent,
         Comp5Component,
-        FinaleBuonoComponent
+        FinaleBuonoComponent,
+        Comp6Component
     ],
     imports: [
         BrowserModule,

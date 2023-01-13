@@ -1,9 +1,18 @@
+.container-fluid {
+    height: 86.7vh;
+}
+
 #donna {
     background-image: url('../../../assets/img/kureneko-e1610987984195-remini-enhanced.png');
     background-size: cover;
     height: 86.7vh;
 }
-
+#quiz {
+    height: 86.7vh;
+}
+#counter {
+    border-color: 1px solid #FFA690;
+}
 .bg-color {
     background-color: #FCCDBD;
     animation: fadeIn 0.3s ease forwards;
@@ -29,3 +38,28 @@
     background-color: #FFA690;
 }
 
+.bg-danger {
+   background-color: #ff6961;
+   border: 1px solid #ff6961;
+}
+
+.bg-danger:hover {
+    box-shadow: 0 0.4rem 1rem 0 #CACAC9;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.bg-success {
+    background-color: #C1E1C1;
+    border: 1px solid #C1E1C1;
+ }
+
+ .bg-success:hover {
+     box-shadow: 0 0.4rem 1rem 0 #CACAC9;
+     transform: translateY(-0.1rem);
+     transition: transform 150ms;
+ }
+
+.favorite {
+    color: red;
+}

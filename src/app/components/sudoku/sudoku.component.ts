@@ -14,6 +14,7 @@ export class SudokuComponent implements OnInit {
     board!: SudokuBoard
     activeNumber!: number;
 
+    isFavorite = false;
     isDone = false;
 
     constructor(private afAuth: AngularFireAuth) { }

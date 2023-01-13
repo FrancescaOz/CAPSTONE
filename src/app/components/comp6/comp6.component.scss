@@ -1,0 +1,27 @@
+.container-fluid {
+
+    background-image: url('../../../assets/img/joker-chen-8-jkjkhb.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 86.7vh;
+}
+
+#logo {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.btn-secondary {
+    background-color: #A79FB5;
+    border: 1px solid #A79FB5;
+    color: #251B21;
+}
+
+.btn-secondary:hover {
+    background-color: #CEC5C0;
+}
+
+i {
+    color: #A79FB5;
+}

@@ -19,26 +19,29 @@ export class QuizComponent implements OnInit {
     //tempo
     timeLeft: number = 100;
     interval: any;
+    router: any;
 
-    constructor(private srv: QuizService, afAuth: AngularFireAuth) { }
+    isFavorite = false;
+
+    constructor(private srv: QuizService, private afAuth: AngularFireAuth) { }
 
     ngOnInit() {
         //sessione dell'utente loggato
-       /* this.afAuth.authState.subscribe((user) => {
-            if (user && user.displayName) {
+        this.afAuth.authState.subscribe((user) => {
+             if (user && user.displayName) {
 
-                let utenteLoggato = {} as UserLoggato;
-                utenteLoggato.displayName = user.displayName;
-                utenteLoggato.role = 'utente';
-                utenteLoggato.session = '/quiz';
-                localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
+                 let utenteLoggato = {} as UserLoggato;
+                 utenteLoggato.displayName = user.displayName;
+                 utenteLoggato.role = 'utente';
+                 utenteLoggato.session = '/quiz';
+                 localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
 
-                JSON.parse(localStorage.getItem('user')!);
-            } else {
-                localStorage.setItem('user', 'null');
-                JSON.parse(localStorage.getItem('user')!);
-            }
-        });*/
+                 JSON.parse(localStorage.getItem('user')!);
+             } else {
+                 localStorage.setItem('user', 'null');
+                 JSON.parse(localStorage.getItem('user')!);
+             }
+         });
         this.start();
     }
 
@@ -53,7 +56,6 @@ export class QuizComponent implements OnInit {
         this.interval = setInterval(() => {
             if (this.timeLeft > 0) {
                 this.timeLeft--;
-
             } else {
                 this.answerQuestion(false);
             }
@@ -69,7 +71,7 @@ export class QuizComponent implements OnInit {
         this.srv.getQuestion().subscribe((result: any) => {
             console.log(result.results);
             this.parseTreeResult(result.results);
-        }, error => {
+        }, _error => {
 
         });
     }
