@@ -1,22 +1,23 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-4 mx-auto bg-light mt-5 p-4 rounded-4 text-center">
-            <h3>Accedi</h3>
+            <h3 class="text-success text-uppercase">Accedi</h3>
             <!--INPUT-->
             <form #accedi="ngForm">
                 <div class="form-group">
-                    <input type="text" [ngModel]="userForm.nome" #nome="ngModel" name="nome" class="form-control mb-1" placeholder="Username"
-                        #userName required>
-                        <p *ngIf="nome.invalid" class=" text-danger">Questo campo è obbligatorio</p>
+                    <label>E-mail <span *ngIf="nome.invalid" class="text-danger">**</span></label>
+                    <input type="text" [ngModel]="userForm.nome" #nome="ngModel" name="nome" class="form-control mb-1"
+                        placeholder="Inserisci la tua e-mail di registrazione" #userName required>
                 </div>
                 <div class="form-group">
-                    <input type="password" [ngModel]="userForm.password" #password="ngModel" name="password" class="form-control mb-1" placeholder="Password" #userPassword
-                        required>
-                        <p *ngIf="password.invalid" class="text-danger">Questo campo è obbligatorio</p>
+                    <label>Password <span *ngIf="password.invalid" class="text-danger">**</span></label>
+                    <input type="password" [ngModel]="userForm.password" #password="ngModel" name="password"
+                        class="form-control mb-1" placeholder="Inserisci la tua password" #userPassword required>
                 </div>
                 <!--funzione Sign In-->
                 <button type="button" class="btn btn-success rounded-3 my-3" value="Log in"
-                    (click)="authService.SignIn(userName.value, userPassword.value)" [disabled]="accedi.invalid">Accedi</button>
+                    (click)="authService.SignIn(userName.value, userPassword.value)"
+                    [disabled]="accedi.invalid">Accedi</button>
             </form>
             <div>
                 <p>Oppure:</p>

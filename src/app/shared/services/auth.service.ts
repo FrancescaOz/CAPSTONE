@@ -23,11 +23,11 @@ export class AuthService {
                 this.userData = user;
                 //sessione dell'utente loggato
                 localStorage.setItem('user', JSON.stringify(this.userData));
-                    let utenteLoggato = {} as UserLoggato;
-                        utenteLoggato.displayName = user.displayName;
-                        utenteLoggato.role = 'utente';
-                        utenteLoggato.session = '';
-                        localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
+                let utenteLoggato = {} as UserLoggato;
+                utenteLoggato.displayName = user.displayName;
+                utenteLoggato.role = 'utente';
+                utenteLoggato.session = '';
+                localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
 
                 JSON.parse(localStorage.getItem('user')!);
             } else {
@@ -38,12 +38,18 @@ export class AuthService {
     }
 
     //accedi email/password
+    user!: any;
+
     SignIn(email: string, password: string) {
         return this.afAuth.signInWithEmailAndPassword(email, password).then((result) => {
             this.SetUserData(result.user);
             this.afAuth.authState.subscribe((user) => {
-                if (user) {
+                console.log(user);
+                if (user?.uid) {
+                    this.user = user;
+                    console.log(user.uid);
                     this.router.navigate(['profilo']);
+
                 }
             });
         })
@@ -55,7 +61,8 @@ export class AuthService {
     //registrati con email/password
     SignUp(email: string, password: string) {
         return this.afAuth.createUserWithEmailAndPassword(email, password).then((result) => {
-            //this.SendVerificationMail();
+            this.SendVerificationMail();
+            console.log(email, password);
             this.SetUserData(result.user);
             this.router.navigate(['sign-in']);
         })
@@ -66,11 +73,11 @@ export class AuthService {
 
     SendVerificationMail() {
         return this.afAuth.currentUser
-          .then((u: any) => u.sendEmailVerification())
-          .then(() => {
-            this.router.navigate(['verificaMail']);
-          });
-      }
+            .then((u: any) => u.sendEmailVerification())
+            .then(() => {
+                this.router.navigate(['verificaMail']);
+            });
+    }
 
     //reset password
 

@@ -1,11 +1,11 @@
 .container-fluid {
 
     background-image: url('/assets/img/inizio.jpg');
+    background-color: #D8BA87;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 86.7vh;
-
 }
 
 #backTesto {
@@ -25,15 +25,4 @@
 .position-relative {
     margin-top: 25%
 }
-
-/*@media only screen and (min-width:768px) {
-
-    .container-fluid {
-        height: 83vh;
-    }
-
-    .position-relative {
-        margin-top: 20%
-    }
-}*/
 

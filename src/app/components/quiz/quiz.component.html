@@ -3,7 +3,8 @@
         <div class="col-md-6" id="donna">
             <!--Preferiti-->
             <div class="row mt-2 text-white" title="Questo gioco ti è piaciuto? metti un like!">
-                <a type="button" (click)="isFavorite = !isFavorite"><i [ngClass]="{'favorite': isFavorite}" class="fa-solid fa-heart"></i></a>
+                <a type="button" (click)="isFavorite = !isFavorite"><i [ngClass]="{'favorite': isFavorite}"
+                        class="fa-solid fa-heart"></i></a>
             </div>
             <p class="bg-light rounded-5 p-3 mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
                 perspiciatis facilis consectetur accusantium deleniti velit adipisci ipsum magnam ducimus rerum cumque
@@ -13,7 +14,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row mt-5">
-                        <div *ngIf="totalCount<=11 && quiz">
+                        <div *ngIf="totalCount<11 && quiz">
                             <div class="col-md-2 offset-md-5 mb-5 text-center">
                                 <h3 class="border rounded-pill">{{correctCount}}/{{totalCount}}</h3>
                             </div>
@@ -38,12 +39,14 @@
                                         (click)="answerQuestion(answer.correctAnswer)"
                                         [innerHtml]=answer.answer></button>
                                 </div>
-                                <div *ngIf="totalCount==10" class="mt-5">
-                                    <button class="bg-color p-3 rounded-pill option w-100"
-                                        *ngIf="correctCount>5">Complimenti, hai battuto la strega</button>
-                                    <button class="bg-danger p-3 rounded-pill option w-100" *ngIf="correctCount<=4">Hai
-                                        perso</button>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div *ngIf="totalCount==11" class="mt-5">
+                                <button class="bg-color p-3 rounded-pill option w-100"
+                                    *ngIf="correctCount >= 6">Complimenti, hai battuto la strega</button>
+                                <button class="bg-danger p-3 rounded-pill option w-100" *ngIf="correctCount <= 5">Hai
+                                    perso</button>
                             </div>
                         </div>
                     </div>

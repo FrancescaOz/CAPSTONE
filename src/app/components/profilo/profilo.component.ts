@@ -8,5 +8,8 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 })
 export class ProfiloComponent implements OnInit {
     constructor(public authService: AuthService) { }
-    ngOnInit(): void { }
+
+    user = this.authService.user;
+
+    ngOnInit(): void {}
 }

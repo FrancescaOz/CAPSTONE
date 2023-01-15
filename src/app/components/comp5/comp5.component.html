@@ -2,7 +2,13 @@
     <video autoplay muted loop>
         <source src="https://cdn-animation.artstation.com/p/video_sources/000/831/705/deepwoodsvid01.mp4">
     </video>
-    <div class="row">
+    <div class="row mx-0">
+        <div class="col-md-12 text-end mt-3">
+                    <a type="button" class="btn btn-success" [routerLink]="'/home/'"><i class="fa-solid fa-house-flag"></i> Torna alla Home</a>
+
+        </div>
+    </div>
+    <div class="row mx-0">
         <div class="col-md-6 offset-3 bg-light p-4 rounded-4 mt-5" id="animazione">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolorem culpa at exercitationem,
                 recusandae aliquam sapiente vel obcaecati numquam cum harum beatae nemo aut molestias aspernatur ipsum
@@ -19,10 +25,5 @@
             </p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-                    <a type="button" class="btn btn-success" [routerLink]="'/home/'"><i class="fa-solid fa-house-flag"></i> Torna alla Home</a>
 
-        </div>
-    </div>
 </div>
