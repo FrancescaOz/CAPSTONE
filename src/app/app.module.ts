@@ -40,6 +40,7 @@ import { environment } from './environments/environments';
 import { AuthService } from './shared/services/auth.service';
 import {HttpClientModule} from '@angular/common/http';
 import { Comp6Component } from './components/comp6/comp6.component';
+import { CalipsoShopComponent } from './components/calipso-shop/calipso-shop.component';
 
 
 
@@ -63,7 +64,8 @@ import { Comp6Component } from './components/comp6/comp6.component';
         QuizComponent,
         Comp5Component,
         FinaleBuonoComponent,
-        Comp6Component
+        Comp6Component,
+        CalipsoShopComponent
     ],
     imports: [
         BrowserModule,

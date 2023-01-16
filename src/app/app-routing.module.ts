@@ -12,6 +12,8 @@ import { SudokuComponent } from './components/sudoku/sudoku.component';
 import { Comp5Component } from './components/comp5/comp5.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { Comp6Component } from './components/comp6/comp6.component';
+import { FinaleBuonoComponent } from './components/finale-buono/finale-buono.component';
+import { CalipsoShopComponent } from './components/calipso-shop/calipso-shop.component';
 
 import { PasswordDimenticataComponent } from './components/password-dimenticata/password-dimenticata.component';
 import { VerificaMailComponent } from './components/verifica-mail/verifica-mail.component';
@@ -20,7 +22,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
 
 import { AuthGuard } from './shared/guard/auth.guard';
-import { FinaleBuonoComponent } from './components/finale-buono/finale-buono.component';
+
+
 
 const routes: Routes = [
     {
@@ -78,6 +81,10 @@ const routes: Routes = [
     {
         path: "straniincontri",
         component: Comp6Component,
+    },
+    {
+        path: "CalipsoShop",
+        component: CalipsoShopComponent,
     },
     {
         path: "complimenti",

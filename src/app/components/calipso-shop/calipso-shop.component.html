@@ -1,0 +1,60 @@
+<ng-container *ngIf="products.length !=0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 offset-2 mt-5 rounded-4 bg-light">
+                <table class="table table-responsive text-center">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome del prodotto</th>
+                            <th>Immagine del prodotto</th>
+                            <th>Descrizione</th>
+                            <th>Prezzo</th>
+                            <th>Quantit&agrave;</th>
+                            <th>Totale</th>
+                            <th>Azione</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let potion of products; let i = index">
+                            <td><strong>{{i+1}}</strong></td>
+                            <td>{{potion.name}}</td>
+                            <td><img src="{{potion.image}}" alt="il tuo acquisto"></td>
+                            <td>{{potion.description}}</td>
+                            <th>{{potion.price}}&euro;</th>
+                            <td>{{potion.quantity}}</td>
+                            <td>{{potion.total}}&euro;</td>
+                            <td>
+                                <button class="btn btn-danger" (click)="removeItem(potion)"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button class="btn btn-outline-danger" (click)="emptyCart()">Svuota carrello</button></td>
+                            <td><button class="btn btn-outline-primary" [routerLink]="'/straniincontri'">Torna al negozio</button></td>
+                            <td><button class="btn btn-outline-success">Paga ora</button></td>
+                            <td><strong class="border border-dark border-1 rounded-2 p-2">Totale: {{Gtotal}}&euro;</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="products.length ==0">
+    <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-6 offset-3 mt-5 bg-light rounded-4">
+                    <img src="../../../assets/img/cart.png"
+                        alt="cart empty" class="mt-5">
+                    <h4 class="mt-2">Ops, il tuo carrello è vuoto</h4>
+                    <h6 class="fst-italic mb-4">Compra subito qualcosa!</h6>
+                    <button [routerLink]="'/straniincontri'" class="btn btn-secondary mb-5"><i class="fa-solid fa-cart-shopping"></i> Torna da Calipso</button>
+                </div>
+            </div>
+    </div>
+</ng-container>
