@@ -15,7 +15,7 @@ Ecco quindi che dall'idea, era necessario rendere concreto quanto fosse necessar
 
 ## Mockup e previsioni di rilascio	:black_nib:
 
-https://www.canva.com/design/DAFVCjtah4Y/oUL-6Y_c_jSU3-VuznZ_aQ/view?utm_content=DAFVCjtah4Y&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
+[[https://www.canva.com/design/DAFVCjtah4Y/oUL-6Y_c_jSU3-VuznZ_aQ/view?utm_content=DAFVCjtah4Y&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink](https://www.canva.com/design/DAFVCjtah4Y/JvnC0ShnjLKMWQ7NXvjFNA/edit?utm_content=DAFVCjtah4Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)](https://www.canva.com/design/DAFVCjtah4Y/JvnC0ShnjLKMWQ7NXvjFNA/view?utm_content=DAFVCjtah4Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 
 ## Impostazione componenti storia :open_book:
