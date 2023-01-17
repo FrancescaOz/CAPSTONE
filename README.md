@@ -20,4 +20,4 @@ https://www.canva.com/design/DAFVCjtah4Y/oUL-6Y_c_jSU3-VuznZ_aQ/view?utm_content
 
 ## Impostazione componenti storia :open_book:
 
-https://www.figma.com/file/UxcHDi1j3JwJ50GRHUe5p6/STORIA-BIVI?node-id=0%3A1&t=HvadsG2fGyMenJeb-1
+https://www.figma.com/file/UxcHDi1j3JwJ50GRHUe5p6/STORIA-BIVI?node-id=0%3A1&t=rbqprgxRnAifwiSY-1
