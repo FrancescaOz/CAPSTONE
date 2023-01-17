@@ -35,7 +35,7 @@ export class AcquistiComponent implements OnInit{
         animatedDiv!.style.display = 'none';
         setTimeout(() => {
             animatedDiv!.style.display = 'block';
-        }, 5000);
+        }, 4000);
     }
 
 }
