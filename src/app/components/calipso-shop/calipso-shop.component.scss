@@ -1,7 +1,7 @@
 .container-fluid {
-
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/021/547/235/large/roberto-gatto-alchemycorner.jpg?1572102931');
     background-color: #fff;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 86.7vh;
@@ -16,5 +16,10 @@ img {
     background-color: #B37D90;
     border: 1px solid #643255;
     color: #fff;
+}
 
+.btn-secondary:hover {
+    background-color: #77405F;
+    border: 1px solid #B37D90;
+    color: #fff;
 }
