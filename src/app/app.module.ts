@@ -41,6 +41,10 @@ import { AuthService } from './shared/services/auth.service';
 import {HttpClientModule} from '@angular/common/http';
 import { Comp6Component } from './components/comp6/comp6.component';
 import { CalipsoShopComponent } from './components/calipso-shop/calipso-shop.component';
+import { NoAcquistiComponent } from './components/no-acquisti/no-acquisti.component';
+import { AcquistiComponent } from './components/acquisti/acquisti.component';
+import { QuizBattutoComponent } from './components/quiz-battuto/quiz-battuto.component';
+import { QuizPersoComponent } from './components/quiz-perso/quiz-perso.component';
 
 
 
@@ -65,7 +69,11 @@ import { CalipsoShopComponent } from './components/calipso-shop/calipso-shop.com
         Comp5Component,
         FinaleBuonoComponent,
         Comp6Component,
-        CalipsoShopComponent
+        CalipsoShopComponent,
+        NoAcquistiComponent,
+        AcquistiComponent,
+        QuizBattutoComponent,
+        QuizPersoComponent
     ],
     imports: [
         BrowserModule,

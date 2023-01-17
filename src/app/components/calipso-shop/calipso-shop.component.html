@@ -8,7 +8,7 @@
                             <th>#</th>
                             <th>Nome del prodotto</th>
                             <th>Immagine del prodotto</th>
-                            <th>Descrizione</th>
+                            <th>Descrizione del prodotto</th>
                             <th>Prezzo</th>
                             <th>Quantit&agrave;</th>
                             <th>Totale</th>
@@ -34,8 +34,8 @@
                             <td colspan="4"></td>
                             <td><button class="btn btn-outline-danger" (click)="emptyCart()">Svuota carrello</button></td>
                             <td><button class="btn btn-outline-primary" [routerLink]="'/straniincontri'">Torna al negozio</button></td>
-                            <td><button class="btn btn-outline-success">Paga ora</button></td>
-                            <td><strong class="border border-dark border-1 rounded-2 p-2">Totale: {{Gtotal}}&euro;</strong></td>
+                            <td><button class="btn btn-outline-success" [routerLink]="'/nonsoloacquisti'">Paga ora</button></td>
+                            <td><strong>Totale: {{Gtotal}}&euro;</strong></td>
                         </tr>
                     </tfoot>
                 </table>
@@ -43,7 +43,6 @@
         </div>
     </div>
 </ng-container>
-
 
 <ng-container *ngIf="products.length ==0">
     <div class="container-fluid">

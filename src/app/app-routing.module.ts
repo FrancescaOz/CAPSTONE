@@ -14,6 +14,11 @@ import { QuizComponent } from './components/quiz/quiz.component';
 import { Comp6Component } from './components/comp6/comp6.component';
 import { FinaleBuonoComponent } from './components/finale-buono/finale-buono.component';
 import { CalipsoShopComponent } from './components/calipso-shop/calipso-shop.component';
+import { NoAcquistiComponent } from './components/no-acquisti/no-acquisti.component';
+import { AcquistiComponent } from './components/acquisti/acquisti.component';
+import { QuizBattutoComponent } from './components/quiz-battuto/quiz-battuto.component';
+import { QuizPersoComponent } from './components/quiz-perso/quiz-perso.component';
+
 
 import { PasswordDimenticataComponent } from './components/password-dimenticata/password-dimenticata.component';
 import { VerificaMailComponent } from './components/verifica-mail/verifica-mail.component';
@@ -87,6 +92,14 @@ const routes: Routes = [
         component: CalipsoShopComponent,
     },
     {
+        path: "ops",
+        component: NoAcquistiComponent,
+    },
+    {
+        path: "nonsoloacquisti",
+        component: AcquistiComponent,
+    },
+    {
         path: "complimenti",
         component: FinaleBuonoComponent,
     },
@@ -101,6 +114,14 @@ const routes: Routes = [
     {
         path: "quiz",
         component: QuizComponent
+    },
+    {
+        path: "controogniaspettativa",
+        component: QuizBattutoComponent
+    },
+    {
+        path: "nonsemprevabene",
+        component: QuizPersoComponent
     },
     {
         path: "**",

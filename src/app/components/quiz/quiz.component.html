@@ -42,10 +42,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div *ngIf="totalCount==11" class="mt-5">
-                                <button class="bg-color p-3 rounded-pill option w-100"
-                                    *ngIf="correctCount >= 6">Complimenti, hai battuto la strega</button>
-                                <button class="bg-danger p-3 rounded-pill option w-100" *ngIf="correctCount <= 5">Hai
+                            <div *ngIf="totalCount==11">
+                                <button class="bg-color p-3 rounded-pill option w-100 text-uppercase"
+                                    *ngIf="correctCount >= 6" [routerLink]="'/controogniaspettativa'">Complimenti, hai battuto la strega</button>
+                                <button class="bg-danger p-3 rounded-pill option w-100 text-white text-uppercase" *ngIf="correctCount <= 5" [routerLink]="'/nonsemprevabene'">Hai
                                     perso</button>
                             </div>
                         </div>

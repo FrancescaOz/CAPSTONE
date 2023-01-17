@@ -1,0 +1,23 @@
+.container-fluid {
+    background-color: #F4EFE8;
+}
+
+#perdita {
+    background-image: url('../../../assets/img/gigantic.jpg');
+    background-color: #F1DCD1;
+    height: 86.7vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-primary {
+    background-color: #CDA89B;
+    border: 1px solid #CDA89B;
+    color:#38292A;
+}
+
+.btn-primary:hover {
+    background-color: #906C72;
+    border: 1px solid #906C72;
+    color:#FFF6EB;
+}
