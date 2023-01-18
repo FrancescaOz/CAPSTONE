@@ -30,6 +30,7 @@ export class QuizBattutoComponent implements OnInit {
         this.hideAnimatedDivUno();
         this.hideAnimatedDivDue();
         this.hideAnimatedDivTre();
+        this.hideAnimatedDivQuattro();
     }
 
     hideAnimatedDivUno() {
@@ -54,5 +55,13 @@ export class QuizBattutoComponent implements OnInit {
         setTimeout(() => {
             animatedDiv!.style.display = 'block';
         }, 5000);
+    }
+
+    hideAnimatedDivQuattro() {
+        let animatedDiv = document.getElementById('quarto');
+        animatedDiv!.style.display = 'none';
+        setTimeout(() => {
+            animatedDiv!.style.display = 'block';
+        }, 7000);
     }
 }

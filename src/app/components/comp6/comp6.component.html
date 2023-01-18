@@ -1,25 +1,24 @@
 <div class="container-fluid">
     <div class="row justify-content-between">
         <div class="col-md-4 bg-light mt-3 rounded-4 p-3 ms-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas consequatur nulla enim doloribus! Aliquam
-                vitae accusantium necessitatibus? Nesciunt, aliquam ducimus dolorem sapiente voluptatem eligendi rerum
-                minima repudiandae ea harum incidunt, cupiditate eveniet possimus quod ut laudantium. Fuga reiciendis
-                commodi blanditiis beatae tenetur ipsam voluptates, repudiandae velit at quam, ratione ipsa veritatis
-                quos ducimus sint, iure quod! Dolores, hic nam minima natus minus deserunt, sunt error rem porro ut
-                accusantium ad odio. Exercitationem qui, sint eos dolores itaque non reiciendis doloribus odio est. Quia
-                ipsam explicabo quam recusandae. Culpa esse nisi cum, quam ut distinctio debitis ratione non nostrum
-                necessitatibus expedita.</p>
+            <p>Per lungo tempo sembrò una pessima idea, un miraggio come un altro, una speranza in forma di sassi e fango ma poi fu impossibile non provare orgoglio per la propria perseveranza.
+                Oltre allo stupore ovviamente.
+                Un grosso dinosauro riposava in una radura che a malapena lo conteneva, uno spazio di erba brulla reso tale dall'incedere dei molti clienti che sembravano accorsi al piccolo baracchino di legno posto contro la pancia dell'enorme creatura. <br>
+                Poco distante, coperta da un grosso cappello viola dalla tesa ben più che ampia, riposava quella che a tutti gli effetti pareva una strega.
+                Non aveva un naso adunco o un neo peloso sopra di esso ma il grosso cappello a punta e il volteggiare delle pozioni attorno a lei erano un buon indizio per poter dire di non aver ceduto ad una descrizione per stereotipo &laquo; Buongiorno viaggiatore e benvenuto da Calipso's che non sono io se te lo stessi chiedendo, il mio nome è Imelda... la miglior poziomante da qui a...lì&raquo;  fece alludendo ad un grosso masso posto a qualche decina di metri da lei &laquo; vendiamo pozioni per ogni esigenza e vizio te ad esempio... scommetto che hai un disperato bisogno di aiuto&raquo;   il che era vero ma nell'osservare gli alambicchi colmi di luce lunare e sangue di pipistrello veniva da chiedersi come potesse offrirvelo con quegli intrugli &laquo;potrei aiutarti... naturalmente al giusto prezzo&raquo;</p>
 
             <div class="row m-4 p-2">
-                <button class="btn btn-secondary mb-3" [routerLink]="'/ops'">Rinuncia agli acquisti</button>
+                <button class="btn btn-secondary" [routerLink]="'/ops'">Rinuncia agli acquisti</button>
             </div>
         </div>
+        <!---MINI SHOP-->
         <div class="col-md-4 bg-light mt-3 rounded-4 p-3 me-4">
             <div class="navbar navbar-light mb-2" style="background-color: #A79FB5;">
                 <a class="navbar-brand ms-3 text-white"><img src="https://www.pngrepo.com/png/272747/512/potion.png"
-                        width="30" height="30" alt="potion logo" id="logo" [routerLink]="'/straniincontri'"> Calipso's: pozioni a buon mercato</a>
-                <span class="me-3 text-white">{{totalItem}} <a type="button" [routerLink]="'/CalipsoShop'"><i class="fa-solid fa-cart-shopping"
-                            style="color: #fff;"></i></a></span>
+                        width="30" height="30" alt="potion logo" id="logo" [routerLink]="'/straniincontri'"> Calipso's:
+                    pozioni a buon mercato</a>
+                <span class="me-3 text-white">{{totalItem}} <a type="button" [routerLink]="'/CalipsoShop'"><i
+                            class="fa-solid fa-cart-shopping" style="color: #fff;"></i></a></span>
             </div>
             <div class="container">
                 <div class="row mb-3">
@@ -32,10 +31,12 @@
                             <p class="mt-3">{{potion.description}}</p>
                             <div class="row justify-content-center">
                                 <div class="col-4">
-                                    <a type="button"><i class="fa-regular fa-heart"></i></a>
+                                    <a type="button" (click)="addToWishlist(potion)"><i
+                                            class="fa-regular fa-heart"></i></a>
                                 </div>
                                 <div class="col-4">
-                                    <a type="button" (click)="addToCart(potion)"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a type="button" (click)="addToCart(potion)"><i
+                                            class="fa-solid fa-cart-shopping"></i></a>
                                 </div>
                             </div>
                         </div>

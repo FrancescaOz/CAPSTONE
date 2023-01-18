@@ -36,7 +36,7 @@ export class Comp5Component implements OnInit {
         animatedDiv!.style.display = 'none';
         setTimeout(() => {
             animatedDiv!.style.display = 'block';
-        }, 10000);
+        }, 7000);
     }
 
 

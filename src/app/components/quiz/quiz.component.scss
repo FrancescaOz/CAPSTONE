@@ -6,6 +6,7 @@
     background-image: url('../../../assets/img/kureneko-e1610987984195-remini-enhanced.png');
     background-size: cover;
     height: 86.7vh;
+    background-position: top;
 }
 #quiz {
     height: 86.7vh;
@@ -60,6 +61,8 @@
      transition: transform 150ms;
  }
 
-.favorite {
-    color: red;
+p {
+    text-align: justify;
 }
+
+

@@ -4,6 +4,7 @@ import { PotionService } from 'src/app/shared/services/potion.service';
 import { UserLoggato } from 'src/app/shared/services/user';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { CarrelloService } from 'src/app/shared/services/carrello.service';
+import { PreferitiService } from 'src/app/shared/services/preferiti.service';
 
 @Component({
     selector: 'app-comp6',
@@ -15,7 +16,7 @@ export class Comp6Component implements OnInit {
     potions: any;
     totalItem: number = 0;
 
-    constructor(public srv: PotionService, private afAuth: AngularFireAuth, private cart: CarrelloService) { }
+    constructor(public srv: PotionService, private afAuth: AngularFireAuth, private cart: CarrelloService, private wish: PreferitiService) { }
 
     ngOnInit(): void {
         this.srv.getPotion().subscribe((potion) => {
@@ -53,5 +54,10 @@ export class Comp6Component implements OnInit {
     addToCart(potion: any) {
         this.cart.addToCart(potion);
     }
+
+   addToWishlist(potion:any) {
+        this.wish.addToWishlist(potion);
+    }
+
 
 }

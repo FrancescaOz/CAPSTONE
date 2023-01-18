@@ -21,6 +21,7 @@ export class CalipsoShopComponent implements OnInit {
 
     removeItem(item: any) {
         this.cart.removeCartItem(item);
+        this.Gtotal = this.cart.getTotalPrice();
     }
 
     emptyCart(){
