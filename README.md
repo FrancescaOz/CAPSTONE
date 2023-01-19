@@ -19,3 +19,24 @@ https://www.canva.com/design/DAFVCjtah4Y/JvnC0ShnjLKMWQ7NXvjFNA/view?utm_content
 ## Impostazione componenti storia :open_book:
 
 https://www.figma.com/file/UxcHDi1j3JwJ50GRHUe5p6/STORIA-BIVI?node-id=0%3A1&t=rbqprgxRnAifwiSY-1
+
+## Installazione :desktop_computer:	
+
+Pochi semplici passi per non sbagliare:
+
+1) Reintegrare i node_modules
+
+```bash
+  npm install
+```
+2) Goditi il progetto
+
+```bash
+  ng serve -o
+```
+
+## Appendice :warning:	
+
+Le immagini NON sono in alcun modo di mia proprietà ma hanno il solo scopo di accompagnare la trama senza alcuna azione di lucro. La proprietà intellettuale delle stesse rimane degli autori.
+Con il progredire dei rilasci queste verranno sostituite da componenti originali.
+
