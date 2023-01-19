@@ -36,6 +36,6 @@ export class FinaleBuonoComponent implements OnInit {
         animatedDiv!.style.display = 'none';
         setTimeout(() => {
             animatedDiv!.style.display = 'block';
-        }, 10000);
+        }, 8000);
     }
 }

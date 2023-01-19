@@ -12,7 +12,7 @@
 }
 
 .btn:hover {
-    background-color:#5A765C ;
+    background-color: #5A765C;
 }
 
 .sudoku-board {
@@ -28,7 +28,7 @@
     padding: 0;
     line-height: 3rem;
     display: inline-grid;
-    background-color: aliceblue;
+    background-color: #f0f8ff;
 }
 
 .btn-group {
@@ -70,7 +70,7 @@
     border-right-color: #000000;
 }
 
-.favorite {
-    color: red;
-}
 
+p {
+    text-align: justify;
+}

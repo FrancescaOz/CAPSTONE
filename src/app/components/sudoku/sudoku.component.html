@@ -1,10 +1,13 @@
 <div class="container-fluid">
     <div class="row mx-4 my-0">
-        <div class="col-md-4 mt-4" id="testo">
-            <p class="bg-light rounded-4 p-3"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic qui
-                consequatur rem ab facilis quis laudantium corrupti accusantium! Distinctio numquam suscipit voluptatum,
-                non iste quibusdam! Vero illum corporis, rerum voluptatem soluta consectetur veritatis magni ipsam
-                officia. Error commodi cumque consequuntur.
+        <div class="col-md-5 mt-4">
+            <p class="bg-light rounded-4 p-3"> Avevi già avuto l'impressione che quella prima roccia che avevi visto non fosse del tutto naturale ma nello scostare qualche pianta cresciuta fuori da ogni controllo risultò ovvio che il tuo intuito non si fosse sbagliato.
+                Erano ovviamente statue, simili alle statue Jizo giapponesi se quest'ultime non avessero rappresentato Buddha ma un grosso gatto.
+                Una serie...di grossi gatti dato il numero.
+                Un centinaio ad un conto veloce, custodi di una porta su cui sembravano esserci incastonati dei bottoni da rimettere nel giusto ordine.
+                Qualcuno sembrava aver iniziato ma appariva evidente che ad un certo punto avesse desistito.<br>
+                <br>
+                Che fare quindi? Provare a risolvere un possibile mistero o riprendere la propria strada?
             </p>
             <div class="row mt-3 text-center">
                 <div class="col-md-12">
@@ -17,7 +20,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-7 offset-1 text-center mt-4">
+        <div class="col-md-6 offset-1 text-center mt-4">
             <div class="col sudoku-board {{activeNumber ? 'highlight-' + activeNumber : ''}}" >
                 <div class="row sudoku-row " *ngFor="let row of board.cells; let i = index">
                     <div class="col sudoku-col" *ngFor="let cell of row; let j = index">
