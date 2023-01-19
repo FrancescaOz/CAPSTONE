@@ -34,21 +34,24 @@ Pochi semplici passi per non sbagliare:
 ```bash
   ng serve -o
 ```
-## Screenshoot  
+## Screenshoot :camera:	 
+
+```bash
+Componente schermata **HOME**
+```
 ![image](src/assets/img/screenshotHome.png)
 
 ```bash
-Componente schermata HOME
+Componente **Quiz** le cui domande sono generate da un **API** esterna
 ```
-![image](src/assets/img/screenshotSudoku.png)
 
-```bash
-Componente enigma sudoku
-```
+![image](src/assets/img/screenshotQuiz.png)
+
+
 
 ## Appendice :warning:	
 
-Le immagini NON sono in alcun modo di mia proprietà ma hanno il solo scopo di accompagnare la trama senza alcuna azione di lucro. La proprietà intellettuale delle stesse rimane degli autori.
+Le immagini **non** sono in alcun modo di mia proprietà ma hanno il solo scopo di accompagnare la trama senza alcuna azione di lucro. La proprietà intellettuale delle stesse rimane degli autori.
 Con il progredire dei rilasci queste verranno sostituite da componenti originali.
 
 
