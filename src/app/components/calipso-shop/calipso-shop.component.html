@@ -4,7 +4,7 @@
             <div class="col-md-8 offset-2 mt-5 rounded-4 bg-light">
                 <table class=" table table-responsive text-center">
                     <thead>
-                        <tr>
+                        <tr class="my-3">
                             <th>#</th>
                             <th>Nome del prodotto</th>
                             <th>Immagine del prodotto</th>
@@ -32,9 +32,9 @@
                     <tfoot>
                         <tr>
                             <td colspan="4"></td>
-                            <td><button class="btn btn-outline-danger" (click)="emptyCart()">Svuota carrello</button></td>
-                            <td><button class="btn btn-outline-primary" [routerLink]="'/straniincontri'">Torna al negozio</button></td>
-                            <td><button class="btn btn-outline-success" [routerLink]="'/nonsoloacquisti'">Paga ora</button></td>
+                            <td><button class="btn btn-outline-danger rounded-pill" (click)="emptyCart()">Svuota carrello</button></td>
+                            <td><button class="btn btn-outline-primary rounded-pill" [routerLink]="'/straniincontri'">Torna al negozio</button></td>
+                            <td><button class="btn btn-outline-success rounded-pill" [routerLink]="'/nonsoloacquisti'">Paga ora</button></td>
                             <td><strong>Totale: {{Gtotal}}&euro;</strong></td>
                         </tr>
                     </tfoot>
