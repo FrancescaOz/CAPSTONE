@@ -37,6 +37,15 @@ Pochi semplici passi per non sbagliare:
 ## Screenshoot  
 ![image](src/assets/img/screenshotHome.png)
 
+```bash
+Componente schermata HOME
+```
+![image](src/assets/img/screenshotSudoku.png)
+
+```bash
+Componente enigma sudoku
+```
+
 ## Appendice :warning:	
 
 Le immagini NON sono in alcun modo di mia proprietà ma hanno il solo scopo di accompagnare la trama senza alcuna azione di lucro. La proprietà intellettuale delle stesse rimane degli autori.
