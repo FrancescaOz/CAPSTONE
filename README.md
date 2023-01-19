@@ -36,14 +36,12 @@ Pochi semplici passi per non sbagliare:
 ```
 ## Screenshoot :camera:	 
 
-```bash
-Componente schermata **HOME**
-```
+Componente schermata Home, il tasto continua è abilitato solo ai giocatori loggati che abbiano già iniziato la loro avventura.
+
 ![image](src/assets/img/screenshotHome.png)
 
-```bash
-Componente **Quiz** le cui domande sono generate da un **API** esterna
-```
+Componente Quiz.
+Le domande sono generate da un API esterna che fornisce anche risposte multiple. Il counter si aggiorna con le domande totali e quelle giuste per sbloccare due diversi componenti.
 
 ![image](src/assets/img/screenshotQuiz.png)
 
