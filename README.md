@@ -34,12 +34,13 @@ Pochi semplici passi per non sbagliare:
 ```bash
   ng serve -o
 ```
+## Screenshoot  
+![image](src/assets/img/screenshotHome.png)
 
 ## Appendice :warning:	
 
 Le immagini NON sono in alcun modo di mia proprietà ma hanno il solo scopo di accompagnare la trama senza alcuna azione di lucro. La proprietà intellettuale delle stesse rimane degli autori.
 Con il progredire dei rilasci queste verranno sostituite da componenti originali.
 
-## Screenshoot  
-![image](src/assets/img/screenshotHome.png)
+
 
