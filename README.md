@@ -16,7 +16,7 @@ Ecco quindi che dall'idea, era necessario rendere concreto quanto fosse necessar
 ## Mockup e previsioni di rilascio	:black_nib:
 https://www.canva.com/design/DAFVCjtah4Y/JvnC0ShnjLKMWQ7NXvjFNA/view?utm_content=DAFVCjtah4Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
-## Impostazione componenti storia :open_book:
+## Impostazione componenti storia (da non leggere se non volete spoiler) :open_book:
 
 https://www.figma.com/file/UxcHDi1j3JwJ50GRHUe5p6/STORIA-BIVI?node-id=0%3A1&t=rbqprgxRnAifwiSY-1
 

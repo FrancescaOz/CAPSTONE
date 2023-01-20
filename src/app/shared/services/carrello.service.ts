@@ -40,7 +40,7 @@ export class CarrelloService {
         this.cartItemList.map((q: any) => {
             quantityTotal += q.quantity;
         })
-       return quantityTotal;
+        return quantityTotal;
     }
 
     getTotalPrice(): number {
