@@ -1,4 +1,4 @@
-# Progetto finale EPICODE 
+# CHOOSE - Scegli la tua strada 
 
 Ovvero cosa fare quando le idee sono tante e le passioni altrettante.
 
