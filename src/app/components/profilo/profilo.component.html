@@ -8,14 +8,20 @@
             <div class="col-md-5 col-lg-4 bg-light p-5 rounded-4">
               <div class="media">
                 <img class="align-self-start mr-5 img-thumbnail rounded-circle" style ="width:100px;" src="{{(user.photoURL) ? user.photoURL : '../../../../../assets/img/user.jpg'}}"
-                  alt="{{user.displayName}}">
+                  alt="{{user.displayName || 'banana'}}">
                 <div class="media-body">
                   <h1 class="mt-2">Ciao, <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong></h1>
-                  <p>Email: <strong>{{user.email}}</strong></p>
+                  <p>Email: <strong>{{user.email || 'pippolo'}}</strong></p>
                 </div>
               </div>
+              <div class="col-md-12">
+                <button class="btn btn-primary" [routerLink]="'/home'">Inizia a giocare</button>
+              </div>
+
             </div>
+
           </div>
+
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+//Componenti//
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -19,15 +21,13 @@ import { AcquistiComponent } from './components/acquisti/acquisti.component';
 import { QuizBattutoComponent } from './components/quiz-battuto/quiz-battuto.component';
 import { QuizPersoComponent } from './components/quiz-perso/quiz-perso.component';
 
-
+//componenti/autenticazioni//
 import { PasswordDimenticataComponent } from './components/password-dimenticata/password-dimenticata.component';
 import { VerificaMailComponent } from './components/verifica-mail/verifica-mail.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProfiloComponent } from './components/profilo/profilo.component';
-
 import { AuthGuard } from './shared/guard/auth.guard';
-
 
 
 const routes: Routes = [

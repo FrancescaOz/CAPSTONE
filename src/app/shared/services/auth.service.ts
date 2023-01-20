@@ -64,7 +64,7 @@ export class AuthService {
             this.SendVerificationMail();
             console.log(email, password);
             this.SetUserData(result.user);
-            this.router.navigate(['sign-in']);
+            //this.router.navigate(['sign-in']);
         })
             .catch((error) => {
                 window.alert('Si prega di compilare correttamente i campi')
@@ -100,6 +100,7 @@ export class AuthService {
 
     GoogleAuth() {
         return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
+            console.log(res);
             this.router.navigate(['profilo']);
         });
     }
@@ -108,7 +109,6 @@ export class AuthService {
 
     AuthLogin(provider: any) {
         return this.afAuth.signInWithPopup(provider).then((result) => {
-            this.router.navigate(['profilo']);
             this.SetUserData(result.user);
         })
             .catch((error) => {
@@ -131,6 +131,10 @@ export class AuthService {
             emailVerified: user.emailVerified,
         };
 
+        if (user?.uid) {
+            this.user = user;
+            console.log(user.photoURL);
+        }
         return userRef.set(userData, {
             merge: true,
         });
