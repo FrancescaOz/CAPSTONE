@@ -4,6 +4,7 @@ import *as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { getAuth } from 'firebase/auth';
 
 @Injectable({
     providedIn: 'root'
@@ -100,7 +101,6 @@ export class AuthService {
 
     GoogleAuth() {
         return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-            console.log(res);
             this.router.navigate(['profilo']);
         });
     }
@@ -152,4 +152,5 @@ export class AuthService {
             this.router.navigate(['sign-in']);
         });
     }
+
 }
