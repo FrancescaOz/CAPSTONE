@@ -10,4 +10,5 @@ export interface UserLoggato {
     displayName: string;
     role: string;
     session: string;
+    uid: string;
 }

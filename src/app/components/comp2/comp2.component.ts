@@ -11,14 +11,19 @@ export class Comp2Component implements OnInit {
     constructor(private afAuth: AngularFireAuth) { }
 
     ngOnInit(): void {
+
         this.afAuth.authState.subscribe((user) => {
-            if (user && user.displayName) {
+            console.log(user, 'prova local');
+            if (user) {
                 //sessione dell'utente loggato
+                let nomeSessioneUser = user.uid;
                     let utenteLoggato = {} as UserLoggato;
-                        utenteLoggato.displayName = user.displayName;
+                        utenteLoggato.displayName = (user.displayName !== null)?user?.displayName: '';
                         utenteLoggato.role = 'utente';
                         utenteLoggato.session = '/bussi';
-                        localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
+                        utenteLoggato.uid = user.uid;
+                        localStorage.removeItem(nomeSessioneUser);
+                        localStorage.setItem(nomeSessioneUser, JSON.stringify(utenteLoggato));
 
                 JSON.parse(localStorage.getItem('user')!);
             } else {

@@ -20,15 +20,18 @@ export class AuthService {
     ) {
         //impostazione del localstorage. Quando si è loggati  e quando si è disconnessi
         this.afAuth.authState.subscribe((user) => {
+            console.log('utente', user)
             if (user && user.displayName) {
                 this.userData = user;
                 //sessione dell'utente loggato
+                let nomeSessioneUser = user.uid;
                 localStorage.setItem('user', JSON.stringify(this.userData));
                 let utenteLoggato = {} as UserLoggato;
                 utenteLoggato.displayName = user.displayName;
                 utenteLoggato.role = 'utente';
                 utenteLoggato.session = '';
-                localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
+                utenteLoggato.uid = user.uid;
+                //localStorage.setItem(nomeSessioneUser, JSON.stringify(utenteLoggato));
 
                 JSON.parse(localStorage.getItem('user')!);
             } else {
@@ -47,9 +50,23 @@ export class AuthService {
             this.afAuth.authState.subscribe((user) => {
                 console.log(user);
                 if (user?.uid) {
+                    let nomeSessioneUser = user.uid;
+                    localStorage.setItem('user', JSON.stringify(user));
+                    let utenteLoggato = {} as UserLoggato;
+                    utenteLoggato.displayName = 'User';
+                    utenteLoggato.role = 'utente';
+                    utenteLoggato.session = '';
+                    utenteLoggato.uid = user.uid;
+                    //localStorage.setItem(nomeSessioneUser, JSON.stringify(utenteLoggato));
                     this.user = user;
-                    console.log(user.uid);
-                    this.router.navigate(['profilo']);
+                    //console.log(user.uid, 'vedere utente');
+                    if (this.user !== undefined) {
+                      this.router.navigate(['profilo']);
+                    } else {
+                        alert('attendi un istante');
+                        this.router.navigate(['profilo']);
+                    }
+
 
                 }
             });
@@ -63,7 +80,7 @@ export class AuthService {
     SignUp(email: string, password: string) {
         return this.afAuth.createUserWithEmailAndPassword(email, password).then((result) => {
             this.SendVerificationMail();
-            console.log(email, password);
+            //console.log(email, password);
             this.SetUserData(result.user);
             //this.router.navigate(['sign-in']);
         })
@@ -133,7 +150,6 @@ export class AuthService {
 
         if (user?.uid) {
             this.user = user;
-            console.log(user.photoURL);
         }
         return userRef.set(userData, {
             merge: true,
@@ -146,8 +162,6 @@ export class AuthService {
         return this.afAuth.signOut().then(() => {
             //rimuovo utente
             localStorage.removeItem('user');
-            //rimuovo rotta utente
-            localStorage.removeItem('utenteLoggato');
             //rindirizzo
             this.router.navigate(['sign-in']);
         });

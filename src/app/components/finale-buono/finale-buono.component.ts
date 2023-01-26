@@ -12,15 +12,18 @@ export class FinaleBuonoComponent implements OnInit {
     constructor(private afAuth: AngularFireAuth) { }
 
     ngOnInit() {
-        //sessione dell'utente loggato
         this.afAuth.authState.subscribe((user) => {
-            if (user && user.displayName) {
-
-                let utenteLoggato = {} as UserLoggato;
-                utenteLoggato.displayName = user.displayName;
-                utenteLoggato.role = 'utente';
-                utenteLoggato.session = '/complimenti';
-                localStorage.setItem('utenteLoggato', JSON.stringify(utenteLoggato));
+            console.log(user, 'prova local');
+            if (user) {
+                //sessione dell'utente loggato
+                let nomeSessioneUser = user.uid;
+                    let utenteLoggato = {} as UserLoggato;
+                        utenteLoggato.displayName = (user.displayName !== null)?user?.displayName: '';
+                        utenteLoggato.role = 'utente';
+                        utenteLoggato.session = '/complimenti';
+                        utenteLoggato.uid = user.uid;
+                        localStorage.removeItem(nomeSessioneUser);
+                        localStorage.setItem(nomeSessioneUser, JSON.stringify(utenteLoggato));
 
                 JSON.parse(localStorage.getItem('user')!);
             } else {
